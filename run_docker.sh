@@ -12,9 +12,10 @@ then
   [[ $? == 0 ]] && BUILD=no
 fi
 
-docker run -it  \
+docker run \
    -v $WORKSPACE:/home/rstudio/project \
-   -w /home/rstudio/project \
+   --rm \
+   -it \
+   --user rstudio \
    --entrypoint /bin/bash \
-   --rm  \
-   $dockerrepo ./run.sh
+   $dockerrepo

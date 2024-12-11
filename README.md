@@ -1,4 +1,4 @@
-# Docker image basic R image
+# Docker image basic R image, with Julia (AER-2023-0505)
 
 ## Purpose
 
@@ -63,7 +63,3 @@ docker run -it --rm -v $(pwd)/subdir:/code -w /code $MYHUBID/${MYIMG}:$TAG
 
 
 You can now start to run code.
-
-## NOTE
-
-This entire process could be automated, using [Travis-CI](https://docs.travis-ci.com/user/docker/#pushing-a-docker-image-to-a-registry) or [Github Actions](https://github.com/marketplace/actions/build-and-push-docker-images). Not done yet.
